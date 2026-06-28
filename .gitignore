@@ -1,0 +1,6 @@
+.next/
+.next_backup_brand_refresh/
+node_modules/
+out/
+*.log
+.DS_Store

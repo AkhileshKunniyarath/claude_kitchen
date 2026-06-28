@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#52291C"/>
+      <stop offset="55%" stop-color="#3E1E15"/>
+      <stop offset="100%" stop-color="#25120D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="24%" cy="22%" r="72%">
+      <stop offset="0%" stop-color="#E57A48" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#E57A48" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="62" y="62" width="1076" height="506" rx="34" fill="none" stroke="#C78A43" stroke-opacity="0.28"/>
+
+  <image href="/logo/claude-kitchen-mark.png" x="108" y="120" width="280" height="280"/>
+
+  <text x="444" y="248" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="700" letter-spacing="10" fill="#FBF1E8">CLAUDE</text>
+  <line x1="444" y1="304" x2="560" y2="304" stroke="#C78A43" stroke-width="4" opacity="0.9"/>
+  <text x="588" y="322" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="22" fill="#FBF1E8">KITCHEN</text>
+  <line x1="1000" y1="304" x2="1092" y2="304" stroke="#C78A43" stroke-width="4" opacity="0.9"/>
+
+  <text x="444" y="398" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="9" fill="#C78A43">CLASSIC BIRYANI HUB</text>
+  <text x="444" y="458" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#FBF1E8">Cook. Create. Deliver.</text>
+  <text x="444" y="516" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#FBF1E8" opacity="0.72">Slow-cooked biryani with handcrafted kitchen ritual.</text>
+</svg>

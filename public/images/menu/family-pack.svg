@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1050" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A14A29"/>
+      <stop offset="0.52" stop-color="#D98D3A"/>
+      <stop offset="1" stop-color="#F6E8D8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="52" fill="url(#bg)"/>
+  <rect x="128" y="118" width="944" height="664" rx="44" fill="#FFF7EF" fill-opacity="0.2" stroke="#FFF1E4" stroke-opacity="0.35" stroke-width="4"/>
+  <ellipse cx="600" cy="480" rx="330" ry="112" fill="#6B3422" fill-opacity="0.28"/>
+  <rect x="292" y="298" width="616" height="288" rx="120" fill="#FBF1E8" fill-opacity="0.95"/>
+  <rect x="350" y="258" width="160" height="54" rx="27" fill="#FBF1E8" fill-opacity="0.95"/>
+  <rect x="690" y="258" width="160" height="54" rx="27" fill="#FBF1E8" fill-opacity="0.95"/>
+  <path d="M330 412h540" stroke="#D9A25A" stroke-width="16" stroke-linecap="round" opacity="0.7"/>
+  <path d="M330 462h540" stroke="#D9A25A" stroke-width="16" stroke-linecap="round" opacity="0.5"/>
+  <path d="M330 512h420" stroke="#D9A25A" stroke-width="16" stroke-linecap="round" opacity="0.45"/>
+  <circle cx="788" cy="516" r="24" fill="#D35C30" fill-opacity="0.72"/>
+  <circle cx="736" cy="388" r="18" fill="#6A8A52" fill-opacity="0.72"/>
+  <circle cx="468" cy="526" r="20" fill="#6A8A52" fill-opacity="0.72"/>
+  <text x="120" y="132" fill="#FFF7EF" font-family="Georgia, serif" font-size="44" letter-spacing="7">CLAUDE KITCHEN</text>
+  <text x="120" y="182" fill="#FFF0D8" font-family="Arial, sans-serif" font-size="24" letter-spacing="8">FAMILY PACKS</text>
+  <text x="120" y="760" fill="#4A2418" font-family="Georgia, serif" font-size="86">Portions made for the whole table.</text>
+  <text x="120" y="816" fill="#6B3422" font-family="Arial, sans-serif" font-size="30" letter-spacing="2">Celebration-ready visuals for sharing meals and bulk orders.</text>
+</svg>

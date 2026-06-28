@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="90" x2="1040" y2="810" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5A281C"/>
+      <stop offset="0.55" stop-color="#D35C30"/>
+      <stop offset="1" stop-color="#E6AE62"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 430) rotate(90) scale(260 320)">
+      <stop stop-color="#FFF2E7" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFF2E7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" rx="52" fill="url(#bg)"/>
+  <circle cx="960" cy="168" r="120" fill="#FFF2E7" fill-opacity="0.08"/>
+  <circle cx="238" cy="748" r="154" fill="#FFF2E7" fill-opacity="0.08"/>
+  <circle cx="600" cy="430" r="260" fill="url(#glow)"/>
+  <ellipse cx="600" cy="520" rx="300" ry="98" fill="#4A2418" fill-opacity="0.36"/>
+  <ellipse cx="600" cy="488" rx="290" ry="88" fill="#FBF1E8" fill-opacity="0.94"/>
+  <ellipse cx="600" cy="474" rx="250" ry="58" fill="#F4C772"/>
+  <ellipse cx="600" cy="468" rx="220" ry="44" fill="#FFF0BE" fill-opacity="0.6"/>
+  <path d="M418 474c56-54 304-54 364 0" stroke="#8D4A26" stroke-width="18" stroke-linecap="round" opacity="0.85"/>
+  <path d="M370 560c26 84 106 138 230 138s204-54 230-138" stroke="#F6E8D9" stroke-width="22" stroke-linecap="round" opacity="0.8"/>
+  <path d="M422 598c32 52 92 84 178 84 86 0 146-32 178-84" stroke="#FBF1E8" stroke-width="12" stroke-linecap="round" opacity="0.7"/>
+  <text x="112" y="128" fill="#FBF1E8" font-family="Georgia, serif" font-size="44" letter-spacing="7">CLAUDE KITCHEN</text>
+  <text x="112" y="178" fill="#FAD7A7" font-family="Arial, sans-serif" font-size="24" letter-spacing="8">SIGNATURE BIRYANI</text>
+  <text x="112" y="760" fill="#FBF1E8" font-family="Georgia, serif" font-size="84">Slow-cooked. Layered. Sealed.</text>
+  <text x="112" y="816" fill="#F9E9D7" font-family="Arial, sans-serif" font-size="30" letter-spacing="2">A richer biryani presentation for the menu without broken image requests.</text>
+</svg>
