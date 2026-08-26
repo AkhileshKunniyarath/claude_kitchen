@@ -7,6 +7,7 @@ import {
   WhatsAppIcon,
 } from "@/components/common/SocialIcons";
 import { siteConfig } from "@/data/site-config";
+import { faqs as staticFaqs } from "@/data/faqs";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { FAQAccordion } from "@/components/contact/FAQAccordion";
 import { PageHero } from "@/components/common/PageHero";
@@ -23,8 +24,17 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function ContactPage() {
-  await connectDB();
-  const faqs = await FAQ.find({}).lean();
+  let faqs: any[] = [];
+  try {
+    await connectDB();
+    faqs = await FAQ.find({}).lean();
+  } catch {
+    // DB unavailable — fallback to static FAQs
+  }
+
+  if (!faqs || faqs.length === 0) {
+    faqs = staticFaqs as any[];
+  }
   
   const serializedFaqs = faqs.map(faq => ({
     ...faq,

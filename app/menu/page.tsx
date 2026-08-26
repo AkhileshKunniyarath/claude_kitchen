@@ -3,6 +3,7 @@ import { MenuClient } from "@/components/menu/MenuClient";
 import { PageHero } from "@/components/common/PageHero";
 import connectDB from "@/lib/db";
 import { MenuCategory } from "@/models/Menu";
+import { menuCategories as staticMenuCategories } from "@/data/menu";
 
 export const metadata: Metadata = {
   title: "Menu",
@@ -13,16 +14,25 @@ export const metadata: Metadata = {
 export const revalidate = 60; // Revalidate every 60 seconds
 
 export default async function MenuPage() {
-  await connectDB();
-  const menuCategories = await MenuCategory.find({}).lean();
-  
+  let menuCategories: any[] = [];
+  try {
+    await connectDB();
+    menuCategories = await MenuCategory.find({}).lean();
+  } catch {
+    // DB unavailable — fallback to static menu categories
+  }
+
+  if (!menuCategories || menuCategories.length === 0) {
+    menuCategories = staticMenuCategories as any[];
+  }
+
   // Convert _id to string for serialization
   const serializedCategories = menuCategories.map(cat => ({
     ...cat,
     _id: cat._id?.toString(),
-    dishes: cat.dishes.map(dish => ({
+    dishes: (cat.dishes || []).map((dish: any) => ({
       ...dish,
-      _id: (dish as any)._id?.toString()
+      _id: dish._id?.toString()
     }))
   }));
 

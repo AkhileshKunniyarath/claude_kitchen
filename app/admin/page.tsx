@@ -2,10 +2,37 @@ import connectDB from "@/lib/db";
 import { MenuCategory } from "@/models/Menu";
 import { Testimonial } from "@/models/Testimonial";
 import { FAQ } from "@/models/FAQ";
-import { UtensilsCrossed, MessageSquareQuote, HelpCircle } from "lucide-react";
+import { UtensilsCrossed, MessageSquareQuote, HelpCircle, RefreshCw } from "lucide-react";
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
 
 export const dynamic = "force-dynamic";
+
+async function seedDatabaseAction() {
+  "use server";
+  const { menuCategories } = await import("@/data/menu");
+  const { faqs } = await import("@/data/faqs");
+  const { testimonials } = await import("@/data/testimonials");
+  const { siteConfig } = await import("@/data/site-config");
+  const { SiteConfigModel } = await import("@/models/SiteConfig");
+
+  await connectDB();
+  await Promise.all([
+    MenuCategory.deleteMany({}),
+    FAQ.deleteMany({}),
+    Testimonial.deleteMany({}),
+    SiteConfigModel.deleteMany({}),
+  ]);
+  await Promise.all([
+    MenuCategory.insertMany(menuCategories),
+    FAQ.insertMany(faqs),
+    Testimonial.insertMany(testimonials),
+    SiteConfigModel.create(siteConfig),
+  ]);
+  revalidatePath("/admin");
+  revalidatePath("/menu");
+  revalidatePath("/");
+}
 
 export default async function AdminDashboard() {
   await connectDB();
@@ -52,7 +79,18 @@ export default async function AdminDashboard() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-charcoal mb-8">Dashboard Overview</h1>
+      <div className="flex items-center justify-between mb-8">
+        <h1 className="text-3xl font-bold text-charcoal">Dashboard Overview</h1>
+        <form action={seedDatabaseAction}>
+          <button
+            type="submit"
+            className="inline-flex items-center gap-2 rounded-xl bg-gold px-4 py-2.5 text-sm font-semibold text-charcoal transition-all hover:bg-gold-light"
+          >
+            <RefreshCw size={16} />
+            Seed Initial Data to Database
+          </button>
+        </form>
+      </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => {

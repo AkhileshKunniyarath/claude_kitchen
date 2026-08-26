@@ -22,6 +22,8 @@ export const metadata: Metadata = {
 import connectDB from "@/lib/db";
 import { MenuCategory } from "@/models/Menu";
 import { Testimonial } from "@/models/Testimonial";
+import { menuCategories as staticMenuCategories } from "@/data/menu";
+import { testimonials as staticTestimonials } from "@/data/testimonials";
 
 export const revalidate = 60;
 
@@ -36,20 +38,27 @@ export default async function HomePage() {
       Testimonial.find({}).lean(),
     ]);
   } catch {
-    // DB unavailable — render with empty data
+    // DB unavailable — render with fallback static data
+  }
+
+  if (!menuCategories || menuCategories.length === 0) {
+    menuCategories = staticMenuCategories as any[];
+  }
+  if (!testimonials || testimonials.length === 0) {
+    testimonials = staticTestimonials as any[];
   }
 
   // Extract signature dishes based on the previous static logic
-  const signatureCategory = menuCategories.find(c => c.id === "signature-biryani");
+  const signatureCategory = menuCategories.find(c => c.id === "signature-biryani") || menuCategories[0];
   let signatureDishes: any[] = [];
-  if (signatureCategory && signatureCategory.dishes.length >= 6) {
+  if (signatureCategory && signatureCategory.dishes && signatureCategory.dishes.length >= 6) {
     signatureDishes = [
       signatureCategory.dishes[0], // Hyderabadi Dum
       signatureCategory.dishes[1], // Chicken Dum
       signatureCategory.dishes[5], // Royal Mutton
       signatureCategory.dishes[2], // Prawn
     ];
-  } else if (signatureCategory) {
+  } else if (signatureCategory && signatureCategory.dishes) {
     signatureDishes = signatureCategory.dishes.slice(0, 4);
   }
 
