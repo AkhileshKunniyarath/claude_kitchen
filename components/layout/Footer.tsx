@@ -7,8 +7,15 @@ import { SiteConfigModel } from "@/models/SiteConfig";
 import { siteConfig as fallbackSiteConfig } from "@/data/site-config";
 
 export async function Footer() {
-  await connectDB();
-  const dbConfig = await SiteConfigModel.findOne({}).lean();
+  let dbConfig: any = null;
+  try {
+    const db = await connectDB();
+    if (db) {
+      dbConfig = await SiteConfigModel.findOne({}).lean();
+    }
+  } catch {
+    // Fallback to static siteConfig
+  }
   const siteConfig = dbConfig || fallbackSiteConfig;
 
   return (
