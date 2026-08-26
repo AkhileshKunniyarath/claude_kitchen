@@ -43,8 +43,8 @@ export function generateMetadata({
         {
           url: image,
           width: 1200,
-          height: 630,
-          alt: "Claude Kitchen — Classic Biryani Hub",
+          height: 1200,
+          alt: "Claude Kitchen exact logo",
         },
       ],
       locale: "en_IN",

@@ -2,8 +2,8 @@
   <title id="title">Claude Kitchen horizontal logo light</title>
   <image href="/logo/claude-kitchen-mark.png" x="0" y="0" width="180" height="180"/>
   <text x="220" y="78" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700" letter-spacing="8" fill="#FBF1E8">CLAUDE</text>
-  <line x1="220" y1="108" x2="315" y2="108" stroke="#C78A43" stroke-width="3" opacity="0.9"/>
+  <line x1="220" y1="108" x2="315" y2="108" stroke="#FBF1E8" stroke-width="3" opacity="0.9"/>
   <text x="340" y="121" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="16" fill="#FBF1E8">KITCHEN</text>
-  <line x1="630" y1="108" x2="720" y2="108" stroke="#C78A43" stroke-width="3" opacity="0.9"/>
-  <text x="220" y="158" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="8" fill="#C78A43">COOK. CREATE. DELIVER.</text>
+  <line x1="630" y1="108" x2="720" y2="108" stroke="#FBF1E8" stroke-width="3" opacity="0.9"/>
+  <text x="220" y="158" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="8" fill="#FBF1E8">COOK. CREATE. DELIVER.</text>
 </svg>

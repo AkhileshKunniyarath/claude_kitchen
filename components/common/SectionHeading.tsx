@@ -14,11 +14,11 @@ export function SectionHeading({
   light = false,
 }: SectionHeadingProps) {
   const alignClass = align === "center" ? "text-center items-center" : "text-left items-start";
-  const titleColor = light ? "text-cream" : "text-masala";
-  const subtitleColor = light ? "text-cream/70" : "text-masala/60";
-  const eyebrowColor = light ? "text-gold" : "text-terracotta";
-  const ornamentColor = light ? "bg-gold/45" : "bg-gold/35";
-  const dotColor = light ? "bg-gold" : "bg-terracotta";
+  const titleColor = light ? "text-ivory" : "text-charcoal";
+  const subtitleColor = light ? "text-ivory/65" : "text-text-secondary";
+  const eyebrowColor = light ? "text-gold" : "text-gold-dark";
+  const ornamentColor = light ? "bg-gold/40" : "bg-gold/35";
+  const dotColor = light ? "bg-gold" : "bg-ember";
 
   return (
     <div className={`flex flex-col gap-4 ${alignClass}`}>
@@ -29,7 +29,7 @@ export function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <h2 className={`font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-[0.92] ${titleColor}`}>
+      <h2 className={`font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight ${titleColor}`}>
         {title}
       </h2>
       <div className={`flex items-center gap-3 ${align === "center" ? "" : "justify-start"}`}>

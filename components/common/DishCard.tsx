@@ -33,7 +33,7 @@ export function DishCard({ dish, placement = "dish-card" }: DishCardProps) {
       }
     >
       {/* Image */}
-      <div className="relative h-52 overflow-hidden bg-cream-dark">
+      <div className="relative h-52 overflow-hidden bg-sand">
         {showArtwork ? (
           <DishArtwork dish={dish} />
         ) : (
@@ -61,19 +61,19 @@ export function DishCard({ dish, placement = "dish-card" }: DishCardProps) {
       {/* Content */}
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 grid grid-cols-[1fr_auto] items-start gap-4">
-          <h3 className="min-h-[5.5rem] font-serif text-[2rem] font-semibold leading-[1.05] text-masala">
+          <h3 className="min-h-[5.5rem] font-serif text-[2rem] font-semibold leading-snug text-charcoal">
             {dish.name}
           </h3>
-          <span className="pt-1 text-right font-serif text-2xl font-semibold text-terracotta">
+          <span className="pt-1 text-right font-serif text-2xl font-semibold text-ember">
             {dish.price}
           </span>
         </div>
-        <p className="mb-4 min-h-[5.75rem] text-sm leading-7 text-masala/60">
+        <p className="mb-4 min-h-[5.75rem] text-sm leading-7 text-text-secondary">
           {dish.description}
         </p>
         <div className="mb-5 min-h-[2.5rem]">
           {dish.servingNote && (
-            <p className="text-xs uppercase tracking-[0.18em] text-masala/40">{dish.servingNote}</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-text-muted">{dish.servingNote}</p>
           )}
         </div>
         <WhatsAppButton

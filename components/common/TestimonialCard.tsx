@@ -28,23 +28,23 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
       </div>
 
       {/* Review */}
-      <blockquote className="font-serif text-xl leading-8 text-masala/90 italic">
+      <blockquote className="font-serif text-xl leading-8 text-charcoal/85 italic">
         &ldquo;{testimonial.review}&rdquo;
       </blockquote>
 
       {/* Author */}
-      <div className="mt-auto flex items-center justify-between border-t border-gold/15 pt-5">
+      <div className="mt-auto flex items-center justify-between border-t border-sand pt-5">
         <div>
-          <div className="text-base font-semibold text-masala">
+          <div className="text-base font-semibold text-charcoal">
             {testimonial.name}
           </div>
-          <div className="text-xs uppercase tracking-[0.24em] text-masala/45">{testimonial.location}</div>
+          <div className="text-xs uppercase tracking-[0.24em] text-text-muted">{testimonial.location}</div>
         </div>
         <div className="text-right">
-          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-gold-dark">
             {sourceLabels[testimonial.source]}
           </div>
-          <div className="text-xs text-masala/40">{testimonial.date}</div>
+          <div className="text-xs text-text-muted">{testimonial.date}</div>
         </div>
       </div>
     </div>

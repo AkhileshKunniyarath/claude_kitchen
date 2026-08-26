@@ -10,19 +10,19 @@ interface BrandLogoProps {
 
 const sizeStyles = {
   mark: {
-    sm: "h-10 w-10",
-    md: "h-12 w-12",
-    lg: "h-16 w-16",
+    sm: "h-12 w-12",
+    md: "h-14 w-14",
+    lg: "h-20 w-20",
   },
   horizontal: {
-    sm: "h-10 w-auto",
-    md: "h-12 w-auto",
-    lg: "h-16 w-auto",
+    sm: "h-auto w-24",
+    md: "h-auto w-28",
+    lg: "h-auto w-36",
   },
   stacked: {
-    sm: "h-auto w-28",
-    md: "h-auto w-36",
-    lg: "h-auto w-44",
+    sm: "h-auto w-24",
+    md: "h-auto w-32",
+    lg: "h-auto w-40",
   },
 };
 
@@ -33,20 +33,17 @@ export function BrandLogo({
   className = "",
   priority = false,
 }: BrandLogoProps) {
-  const horizontalSrc =
-    theme === "light"
-      ? "/logo/claude-kitchen-lockup-horizontal-light.svg"
-      : "/logo/claude-kitchen-lockup-horizontal-dark.svg";
-  const stackedSrc = "/logo/claude-kitchen-lockup-stacked.png";
+  const exactLogoSrc = "/logo/claude-kitchen-lockup-stacked.png";
+  const logoClassName = `${sizeStyles[variant][size]} rounded-[18px] object-contain ${className}`.trim();
 
   const mark = (
     <Image
-      src="/logo/claude-kitchen-mark.png"
+      src={exactLogoSrc}
       alt="Claude Kitchen"
-      width={96}
-      height={96}
+      width={512}
+      height={512}
       priority={priority}
-      className={`${sizeStyles.mark[size]} rounded-[22%] shadow-lg ${variant === "mark" ? className : ""}`}
+      className={logoClassName}
     />
   );
 
@@ -56,12 +53,12 @@ export function BrandLogo({
 
   return (
     <Image
-      src={variant === "stacked" ? stackedSrc : horizontalSrc}
+      src={exactLogoSrc}
       alt="Claude Kitchen"
-      width={variant === "stacked" ? 520 : 720}
-      height={variant === "stacked" ? 620 : 180}
+      width={512}
+      height={512}
       priority={priority}
-      className={`${variant === "stacked" ? sizeStyles.stacked[size] : sizeStyles.horizontal[size]} ${className}`}
+      className={logoClassName}
     />
   );
 }

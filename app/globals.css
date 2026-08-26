@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +6,18 @@
 
 @layer base {
   :root {
-    --color-terracotta: #D35C30;
-    --color-masala: #4A2418;
-    --color-cream: #FBF1E8;
-    --color-gold: #C78A43;
-    --color-leaf: #556B4D;
+    --color-ember: #C85A2F;
+    --color-ember-light: #E8774A;
+    --color-ember-dark: #A34420;
+    --color-charcoal: #1A1A1A;
+    --color-charcoal-warm: #222222;
+    --color-charcoal-muted: #333333;
+    --color-gold: #D4A853;
+    --color-gold-light: #E8C97A;
+    --color-gold-dark: #B8912F;
+    --color-ivory: #FAF6F0;
+    --color-ivory-warm: #F3EBE0;
+    --color-sand: #E8DFD2;
   }
 
   * {
@@ -23,42 +30,42 @@
 
   body {
     background:
-      radial-gradient(circle at top left, rgba(199, 138, 67, 0.14), transparent 24%),
-      radial-gradient(circle at 85% 15%, rgba(211, 92, 48, 0.14), transparent 22%),
-      linear-gradient(180deg, #fcf5ed 0%, #f8ebde 42%, #f3e3d0 100%);
-    color: #4A2418;
-    font-family: 'Manrope', system-ui, sans-serif;
+      radial-gradient(circle at top left, rgba(200, 90, 47, 0.06), transparent 24%),
+      radial-gradient(circle at 85% 15%, rgba(212, 168, 83, 0.05), transparent 22%),
+      linear-gradient(180deg, #FAF6F0 0%, #FAF6F0 100%);
+    color: #1C1412;
+    font-family: 'Poppins', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Poppins', system-ui, sans-serif;
     letter-spacing: -0.02em;
   }
 
   ::selection {
-    background: rgba(211, 92, 48, 0.18);
-    color: #4A2418;
+    background: rgba(212, 168, 83, 0.24);
+    color: #1C1412;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full border border-terracotta/30 bg-terracotta px-6 py-3 text-sm font-semibold text-cream-light shadow-[0_14px_35px_rgba(211,92,48,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-terracotta-dark hover:shadow-[0_18px_40px_rgba(211,92,48,0.34)] focus:outline-none focus:ring-2 focus:ring-terracotta focus:ring-offset-2 active:scale-95;
+    @apply inline-flex items-center gap-2 rounded-full border border-ember/30 bg-ember px-6 py-3 text-sm font-semibold text-ivory shadow-[0_14px_35px_rgba(200,90,47,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-ember-dark hover:shadow-[0_18px_40px_rgba(200,90,47,0.34)] focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 active:scale-95;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 rounded-full border border-terracotta/30 bg-white/60 px-6 py-3 text-sm font-semibold text-terracotta shadow-[0_10px_24px_rgba(74,36,24,0.08)] backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-terracotta hover:bg-terracotta hover:text-cream-light focus:outline-none focus:ring-2 focus:ring-terracotta focus:ring-offset-2 active:scale-95;
+    @apply inline-flex items-center gap-2 rounded-full border border-sand bg-ivory/60 px-6 py-3 text-sm font-semibold text-charcoal shadow-[0_10px_24px_rgba(28,20,18,0.06)] backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-ember hover:bg-ember hover:text-ivory focus:outline-none focus:ring-2 focus:ring-ember focus:ring-offset-2 active:scale-95;
   }
 
   .btn-gold {
-    @apply inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold px-6 py-3 text-sm font-semibold text-masala shadow-[0_12px_30px_rgba(199,138,67,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-dark hover:text-cream-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 active:scale-95;
+    @apply inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold px-6 py-3 text-sm font-semibold text-charcoal shadow-[0_12px_30px_rgba(212,168,83,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-dark hover:text-ivory focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 active:scale-95;
   }
 
   .section-heading {
-    @apply font-serif text-masala;
+    @apply font-serif text-charcoal;
   }
 
   .ornament-divider {
@@ -72,7 +79,7 @@
   }
 
   .card-dish {
-    @apply flex h-full flex-col overflow-hidden rounded-[28px] border border-white/65 bg-white/75 shadow-[0_18px_45px_rgba(74,36,24,0.08)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(74,36,24,0.12)];
+    @apply flex h-full flex-col overflow-hidden rounded-[28px] border border-sand bg-ivory-warm/80 shadow-[0_18px_45px_rgba(28,20,18,0.06)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(28,20,18,0.10)];
   }
 
   .tag-badge {
@@ -80,7 +87,7 @@
   }
 
   .tag-signature {
-    @apply tag-badge bg-terracotta/10 text-terracotta border border-terracotta/20;
+    @apply tag-badge bg-ember/10 text-ember border border-ember/20;
   }
 
   .tag-bestseller {
@@ -88,19 +95,19 @@
   }
 
   .tag-spicy {
-    @apply tag-badge bg-red-50 text-red-600 border border-red-100;
+    @apply tag-badge border border-ember/24 bg-ember/12 text-ember-dark;
   }
 
   .tag-vegetarian {
-    @apply tag-badge bg-leaf/10 text-leaf-dark border border-leaf/20;
+    @apply tag-badge border border-gold/28 bg-gold/10 text-gold-dark;
   }
 
   .tag-family-pack {
-    @apply tag-badge bg-masala/10 text-masala border border-masala/20;
+    @apply tag-badge bg-charcoal/8 text-charcoal border border-charcoal/16;
   }
 
   .tag-new {
-    @apply tag-badge bg-blue-50 text-blue-600 border border-blue-100;
+    @apply tag-badge border border-gold/28 bg-gold/10 text-gold-dark;
   }
 
   .scene-wrapper {
@@ -108,15 +115,15 @@
   }
 
   .premium-panel {
-    @apply rounded-[32px] border border-white/70 bg-white/70 shadow-[0_20px_50px_rgba(74,36,24,0.08)] backdrop-blur;
+    @apply rounded-[32px] border border-sand bg-ivory-warm/70 shadow-[0_20px_50px_rgba(28,20,18,0.06)] backdrop-blur;
   }
 
   .premium-panel-dark {
-    @apply rounded-[32px] border border-white/20 bg-masala/95 text-cream shadow-[0_24px_60px_rgba(20,10,7,0.35)];
+    @apply rounded-[32px] border border-charcoal-muted/40 bg-charcoal text-ivory shadow-[0_24px_60px_rgba(28,20,18,0.24)];
   }
 
   .premium-panel-soft {
-    @apply rounded-[32px] border border-[#ead7c3] bg-[#fff8f1]/90 shadow-[0_18px_40px_rgba(74,36,24,0.07)] backdrop-blur;
+    @apply rounded-[32px] border border-sand bg-ivory/90 shadow-[0_18px_40px_rgba(28,20,18,0.06)] backdrop-blur;
   }
 
   .premium-kicker {
@@ -125,20 +132,20 @@
 
   .premium-grid {
     background-image:
-      linear-gradient(rgba(199, 138, 67, 0.12) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(199, 138, 67, 0.12) 1px, transparent 1px);
+      linear-gradient(rgba(212, 168, 83, 0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 168, 83, 0.10) 1px, transparent 1px);
     background-size: 56px 56px;
   }
 
   .section-shell {
     @apply relative overflow-hidden;
     background:
-      radial-gradient(circle at top left, rgba(211, 92, 48, 0.10), transparent 24%),
-      radial-gradient(circle at bottom right, rgba(199, 138, 67, 0.12), transparent 28%);
+      radial-gradient(circle at top left, rgba(200, 90, 47, 0.06), transparent 24%),
+      radial-gradient(circle at bottom right, rgba(212, 168, 83, 0.06), transparent 28%);
   }
 
   .luxury-frame {
-    @apply rounded-[36px] border border-white/20 bg-gradient-to-br from-[#6e3422]/95 via-masala to-[#24120d] text-cream shadow-[0_28px_80px_rgba(20,10,7,0.42)];
+    @apply rounded-[36px] border border-charcoal-muted/20 bg-gradient-to-br from-charcoal via-charcoal-warm to-charcoal text-ivory shadow-[0_28px_80px_rgba(28,20,18,0.24)];
   }
 
   .ornament-pill {
@@ -146,19 +153,19 @@
   }
 
   .glass-dark-card {
-    @apply rounded-[28px] border border-cream/20 bg-cream/10 backdrop-blur-md;
+    @apply rounded-[28px] border border-ivory/12 bg-ivory/6 backdrop-blur-md;
   }
 
   .text-on-dark {
-    @apply text-cream/80;
+    @apply text-ivory/80;
   }
 
   .text-on-dark-soft {
-    @apply text-cream/75;
+    @apply text-ivory/70;
   }
 
   .text-on-dark-muted {
-    @apply text-cream/60;
+    @apply text-ivory/55;
   }
 }
 
@@ -173,7 +180,7 @@
 
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: #C78A43 #FBF1E8;
+    scrollbar-color: #C85A2F #FAF6F0;
   }
 
   .mask-fade-bottom {
@@ -213,7 +220,7 @@
 
 /* Focus visible enhancement */
 :focus-visible {
-  outline: 2px solid #D35C30;
+  outline: 2px solid #C85A2F;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -237,17 +244,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FBF1E8;
+  background: #FAF6F0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C78A43;
+  background: #C85A2F;
   border-radius: 3px;
 }
 
 /* Image placeholder shimmer */
 .img-shimmer {
-  background: linear-gradient(90deg, #f0e4d4 25%, #fef8f3 50%, #f0e4d4 75%);
+  background: linear-gradient(90deg, rgba(243,235,224,0.7) 25%, #F3EBE0 50%, rgba(243,235,224,0.7) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

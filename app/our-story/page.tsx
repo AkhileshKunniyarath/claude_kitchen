@@ -47,32 +47,32 @@ export default function OurStoryPage() {
             { value: "22 Spice", label: "whole-spice layering" },
             { value: "Daily Prep", label: "fresh kitchen rhythm" },
           ].map((item) => (
-            <div key={item.label} className="rounded-2xl border border-cream/18 bg-cream/10 px-4 py-4">
-              <div className="font-serif text-2xl text-cream">{item.value}</div>
-              <div className="mt-1 text-xs uppercase tracking-[0.22em] text-cream/80">{item.label}</div>
+            <div key={item.label} className="rounded-2xl border border-ivory/14 bg-ivory/8 px-4 py-4">
+              <div className="font-serif text-2xl text-gold">{item.value}</div>
+              <div className="mt-1 text-xs uppercase tracking-[0.22em] text-ivory/70">{item.label}</div>
             </div>
           ))}
         </div>
       </PageHero>
 
       {/* Main story */}
-      <section className="bg-cream py-16 md:py-24" aria-label="Our story">
+      <section className="bg-ivory py-16 md:py-24" aria-label="Our story">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid grid-cols-1 items-center gap-10 mb-16 md:grid-cols-2">
             <div className="premium-panel p-8 md:p-10">
-              <div className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-terracotta">
+              <div className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold-dark">
                 Kitchen Philosophy
               </div>
-              <h2 className="mb-5 font-serif text-4xl font-semibold leading-[0.98] text-masala">
+              <h2 className="mb-5 font-serif text-4xl font-semibold leading-[0.98] text-charcoal">
                 The Tradition We Protect
               </h2>
-              <p className="mb-4 leading-8 text-masala/82">
+              <p className="mb-4 leading-8 text-text-secondary">
                 Dum biryani is one of the great slow-food traditions of South
                 Asia. At its core it is deceptively simple: rice, protein,
                 spices and fire. But great biryani is not about ingredients
                 alone — it is about respect for the process.
               </p>
-              <p className="leading-8 text-masala/82">
+              <p className="leading-8 text-text-secondary">
                 At Claude Kitchen, we seal each handi the traditional way, let
                 the steam build pressure inside and leave the fire to do its
                 patient work. There is no peeking, no stirring, no
@@ -81,8 +81,8 @@ export default function OurStoryPage() {
               </p>
             </div>
             <div className="premium-panel-dark flex aspect-square items-center justify-center p-10">
-              <div className="rounded-full border border-gold/20 bg-terracotta/15 px-10 py-10 text-center">
-                <div className="font-serif text-5xl text-cream">Dum</div>
+              <div className="rounded-full border border-gold/20 bg-charcoal-warm px-10 py-10 text-center">
+                <div className="font-serif text-5xl text-ivory">Dum</div>
                 <div className="mt-2 text-xs uppercase tracking-[0.32em] text-gold">sealed handi ritual</div>
               </div>
             </div>
@@ -91,32 +91,32 @@ export default function OurStoryPage() {
           <div className="grid grid-cols-1 items-center gap-10 mb-16 md:grid-cols-2">
             <div className="premium-panel order-2 aspect-[4/3] p-8 md:order-1">
               <div className="flex h-full flex-col justify-between">
-                <div className="text-xs font-semibold uppercase tracking-[0.28em] text-terracotta">
+                <div className="text-xs font-semibold uppercase tracking-[0.28em] text-gold-dark">
                   Signature Balance
                 </div>
-                <div className="font-serif text-5xl font-semibold leading-none text-masala">
+                <div className="font-serif text-5xl font-semibold leading-none text-charcoal">
                   22
-                  <span className="block text-2xl tracking-[0.2em] text-gold-dark">WHOLE SPICES</span>
+                  <span className="block text-2xl tracking-[0.2em] text-ember">WHOLE SPICES</span>
                 </div>
-                <div className="text-sm leading-7 text-masala/78">
+                <div className="text-sm leading-7 text-text-secondary">
                   Toasted, layered, and released gradually into the steam instead of flattened into one-note heat.
                 </div>
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <div className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-terracotta">
+              <div className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold-dark">
                 Craft Notes
               </div>
-              <h2 className="mb-5 font-serif text-4xl font-semibold leading-[0.98] text-masala">
+              <h2 className="mb-5 font-serif text-4xl font-semibold leading-[0.98] text-charcoal">
                 Our Spice Philosophy
               </h2>
-              <p className="mb-4 leading-8 text-masala/82">
+              <p className="mb-4 leading-8 text-text-secondary">
                 We work with whole spices — cardamom pods, cinnamon bark,
                 cloves, star anise, bay leaves, mace and more. They are
                 dry-roasted before each batch, releasing their oils into the
                 cooking fat. You cannot achieve that flavour from a powder.
               </p>
-              <p className="leading-8 text-masala/82">
+              <p className="leading-8 text-text-secondary">
                 The spice balance in our biryani is not sharp or aggressive —
                 it is layered, warm and aromatic. Heat is present but never
                 dominant. We want you to taste the rice, the protein and the
@@ -126,7 +126,7 @@ export default function OurStoryPage() {
           </div>
 
           <div className="premium-panel-dark mb-16 p-10 text-center md:p-14">
-            <blockquote className="mx-auto max-w-3xl font-serif text-3xl font-semibold italic leading-relaxed text-cream md:text-4xl">
+            <blockquote className="mx-auto max-w-3xl font-serif text-3xl font-semibold italic leading-relaxed text-ivory md:text-4xl">
               &ldquo;The aroma of a well-made biryani should reach you before
               the plate does. That moment of anticipation — that is what we
               cook for.&rdquo;
@@ -139,13 +139,13 @@ export default function OurStoryPage() {
       </section>
 
       {/* Values grid */}
-      <section className="bg-[#f5e7d8] py-16" aria-labelledby="values-heading">
+      <section className="bg-ivory py-16" aria-labelledby="values-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <div className="premium-kicker mb-3 text-terracotta">Guiding Principles</div>
+            <div className="premium-kicker mb-3 text-gold-dark">Guiding Principles</div>
             <h2
               id="values-heading"
-              className="font-serif text-4xl font-semibold text-masala md:text-5xl"
+              className="font-serif text-4xl font-semibold text-charcoal md:text-5xl"
             >
               What Guides Us
             </h2>
@@ -156,13 +156,13 @@ export default function OurStoryPage() {
                 key={v.title}
                 className="premium-panel p-6"
               >
-                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-terracotta">
+                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold-dark">
                   {v.index}
                 </div>
-                <h3 className="mb-3 font-serif text-3xl font-semibold text-masala">
+                <h3 className="mb-3 font-serif text-3xl font-semibold text-charcoal">
                   {v.title}
                 </h3>
-                <p className="text-sm leading-7 text-masala/78">{v.desc}</p>
+                <p className="text-sm leading-7 text-text-secondary">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -170,13 +170,13 @@ export default function OurStoryPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-cream px-4 py-16 text-center" aria-label="Order call to action">
+      <section className="bg-ivory px-4 py-16 text-center" aria-label="Order call to action">
         <div className="premium-panel mx-auto max-w-3xl px-6 py-10 sm:px-10">
-          <div className="premium-kicker mb-3 text-terracotta">Taste The Story</div>
-          <h2 className="mb-4 font-serif text-4xl font-semibold text-masala">
+          <div className="premium-kicker mb-3 text-gold-dark">Taste The Story</div>
+          <h2 className="mb-4 font-serif text-4xl font-semibold text-charcoal">
             Come Taste the Difference
           </h2>
-          <p className="mb-8 text-lg leading-8 text-masala/76">
+          <p className="mb-8 text-lg leading-8 text-text-secondary">
             Words can describe patience and craft, but biryani has to be
             experienced. Order now and taste what we mean.
           </p>

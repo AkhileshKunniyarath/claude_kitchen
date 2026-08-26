@@ -20,23 +20,28 @@ export function PageHero({
   const centered = align === "center";
 
   return (
-    <section className="relative overflow-hidden bg-masala px-4 pb-16 pt-32">
+    <section className="relative overflow-hidden bg-ember px-4 pb-16 pt-32">
       <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(211,92,48,0.35),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(199,138,67,0.2),_transparent_28%)]"
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 18% 18%, rgba(200,90,47,0.22), transparent 26%), radial-gradient(circle at 78% 22%, rgba(212,168,83,0.10), transparent 20%), radial-gradient(circle at 54% 75%, rgba(200,90,47,0.12), transparent 22%)",
+        }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 premium-grid opacity-[0.06]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(42,22,16,0.12),rgba(42,22,16,0.88))]" aria-hidden="true" />
+      <div className="absolute inset-0 premium-grid opacity-[0.03]" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl">
-        <div className="mx-auto max-w-5xl rounded-[40px] border border-cream/14 bg-cream/8 px-6 py-10 shadow-[0_24px_80px_rgba(20,10,7,0.28)] backdrop-blur-md sm:px-10 md:px-14 md:py-12">
+        <div className="mx-auto max-w-5xl rounded-[40px] border border-ivory/10 bg-ember-dark/60 px-6 py-10 shadow-[0_24px_80px_rgba(42,22,16,0.30)] backdrop-blur-md sm:px-10 md:px-14 md:py-12">
           <div className={centered ? "text-center" : "text-left"}>
             <BrandLogo
-              variant={compactLogo ? "horizontal" : "stacked"}
+              variant="stacked"
               theme="light"
-              size={compactLogo ? "md" : "sm"}
+              size={compactLogo ? "sm" : "md"}
               className={centered ? "mx-auto mb-8" : "mb-8"}
             />
             <span className="premium-kicker mb-4 block text-gold">{eyebrow}</span>
-            <h1 className="font-serif text-5xl font-semibold leading-[0.94] text-cream md:text-7xl">
+            <h1 className="font-serif text-5xl font-semibold leading-tight text-ivory md:text-7xl">
               {title}
             </h1>
             <p className="text-on-dark mt-6 max-w-2xl text-lg leading-8">

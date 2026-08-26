@@ -1,7 +1,7 @@
-import { siteConfig } from "@/data/site-config";
+import { ISiteConfig } from "@/models/SiteConfig";
 
-export function GTMScript() {
-  if (!siteConfig.gtmId) return null;
+export function GTMScript({ config }: { config: ISiteConfig }) {
+  if (!config.gtmId) return null;
   return (
     <script
       id="gtm-script"
@@ -10,18 +10,18 @@ export function GTMScript() {
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${siteConfig.gtmId}');`,
+})(window,document,'script','dataLayer','${config.gtmId}');`,
       }}
     />
   );
 }
 
-export function GTMNoScript() {
-  if (!siteConfig.gtmId) return null;
+export function GTMNoScript({ config }: { config: ISiteConfig }) {
+  if (!config.gtmId) return null;
   return (
     <noscript>
       <iframe
-        src={`https://www.googletagmanager.com/ns.html?id=${siteConfig.gtmId}`}
+        src={`https://www.googletagmanager.com/ns.html?id=${config.gtmId}`}
         height="0"
         width="0"
         style={{ display: "none", visibility: "hidden" }}

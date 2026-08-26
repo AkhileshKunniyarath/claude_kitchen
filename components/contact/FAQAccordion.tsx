@@ -2,9 +2,19 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { faqs } from "@/data/faqs";
 
-function FAQItem({ faq }: { faq: (typeof faqs)[0] }) {
+interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+}
+
+interface FAQAccordionProps {
+  faqs: FAQ[];
+}
+
+function FAQItem({ faq }: { faq: FAQ }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="rounded-[24px] border border-gold/12 bg-white/60 px-5 shadow-[0_12px_26px_rgba(74,36,24,0.06)]">
@@ -33,7 +43,7 @@ function FAQItem({ faq }: { faq: (typeof faqs)[0] }) {
   );
 }
 
-export function FAQAccordion() {
+export function FAQAccordion({ faqs }: FAQAccordionProps) {
   return (
     <div role="list" aria-label="Frequently asked questions" className="space-y-4">
       {faqs.map((faq) => (

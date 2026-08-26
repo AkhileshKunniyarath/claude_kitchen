@@ -92,7 +92,7 @@ export default function CateringPage() {
           />
           <a
             href={`tel:${siteConfig.phone}`}
-            className="btn-outline border-cream/30 bg-cream/5 text-cream hover:bg-cream hover:text-masala text-base px-8 py-4"
+            className="btn-outline border-ivory/24 bg-ivory/5 text-ivory hover:bg-ivory hover:text-charcoal text-base px-8 py-4"
           >
             <Phone size={18} /> Call to Discuss
           </a>
@@ -100,17 +100,17 @@ export default function CateringPage() {
       </PageHero>
 
       {/* Use cases */}
-      <section className="bg-cream py-16 md:py-24" aria-labelledby="occasions-heading">
+      <section className="bg-ivory py-16 md:py-24" aria-labelledby="occasions-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14 text-center">
-            <div className="premium-kicker mb-3 text-terracotta">Event Formats</div>
+            <div className="premium-kicker mb-3 text-gold-dark">Event Formats</div>
             <h2
               id="occasions-heading"
-              className="font-serif text-4xl font-semibold text-masala md:text-5xl"
+              className="font-serif text-4xl font-semibold text-charcoal md:text-5xl"
             >
               Every Occasion, Perfectly Served
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-masala/60">
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-text-secondary">
               We have catered celebrations of every kind. If there are people
               gathering, we can bring the biryani.
             </p>
@@ -121,13 +121,13 @@ export default function CateringPage() {
                 key={item.title}
                 className="premium-panel p-7"
               >
-                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-terracotta">
+                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold-dark">
                   {item.index}
                 </div>
-                <h3 className="mb-3 font-serif text-3xl font-semibold text-masala">
+                <h3 className="mb-3 font-serif text-3xl font-semibold text-charcoal">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-7 text-masala/64">
+                <p className="text-sm leading-7 text-text-secondary">
                   {item.desc}
                 </p>
               </div>
@@ -137,13 +137,13 @@ export default function CateringPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-masala py-16 md:py-24" aria-labelledby="process-heading">
+      <section className="bg-charcoal py-16 md:py-24" aria-labelledby="process-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14 text-center">
             <div className="premium-kicker mb-3 text-gold">Booking Flow</div>
             <h2
               id="process-heading"
-              className="font-serif text-4xl font-semibold text-cream md:text-5xl"
+              className="font-serif text-4xl font-semibold text-ivory md:text-5xl"
             >
               How It Works
             </h2>
@@ -153,11 +153,11 @@ export default function CateringPage() {
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((step) => (
-              <div key={step.step} className="rounded-[30px] border border-cream/18 bg-cream/10 p-6 backdrop-blur-sm">
-                <div className="mb-5 font-serif text-6xl leading-none text-cream/28">
+              <div key={step.step} className="rounded-[30px] border border-ivory/10 bg-charcoal-warm/60 p-6 backdrop-blur-sm">
+                <div className="mb-5 font-serif text-6xl leading-none text-ivory/15">
                   {step.step}
                 </div>
-                <h3 className="mb-3 font-serif text-3xl font-semibold text-cream">
+                <h3 className="mb-3 font-serif text-3xl font-semibold text-ivory">
                   {step.title}
                 </h3>
                 <p className="text-on-dark-soft text-sm leading-7">
@@ -170,14 +170,14 @@ export default function CateringPage() {
       </section>
 
       {/* Highlights & CTA */}
-      <section className="bg-[#f5e7d8] py-16 md:py-24" aria-labelledby="details-heading">
+      <section className="bg-ivory py-16 md:py-24" aria-labelledby="details-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
             <div className="premium-panel p-8 md:p-10">
-              <div className="premium-kicker mb-3 text-terracotta">What To Expect</div>
+              <div className="premium-kicker mb-3 text-gold-dark">What To Expect</div>
               <h2
                 id="details-heading"
-                className="mb-6 font-serif text-4xl font-semibold text-masala"
+                className="mb-6 font-serif text-4xl font-semibold text-charcoal"
               >
                 Event-ready, without the guesswork
               </h2>
@@ -186,17 +186,17 @@ export default function CateringPage() {
                   <li key={item} className="flex items-center gap-3">
                     <CheckCircle
                       size={18}
-                      className="shrink-0 text-leaf"
+                      className="shrink-0 text-ember"
                       aria-hidden="true"
                     />
-                    <span className="text-masala/80">{item}</span>
+                    <span className="text-text-secondary">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="premium-panel-dark p-10 text-center">
               <div className="premium-kicker mb-3 text-gold">Custom Quote</div>
-              <h3 className="mb-3 font-serif text-4xl font-semibold text-cream">
+              <h3 className="mb-3 font-serif text-4xl font-semibold text-ivory">
                 Get a Custom Quote
               </h3>
               <p className="text-on-dark-soft mb-6 text-sm leading-7">
@@ -212,7 +212,7 @@ export default function CateringPage() {
               <div className="mt-4">
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="text-sm text-cream/72 transition-colors hover:text-cream"
+                  className="text-sm text-ivory/60 transition-colors hover:text-ivory"
                 >
                   Or call us directly: {siteConfig.phone}
                 </a>

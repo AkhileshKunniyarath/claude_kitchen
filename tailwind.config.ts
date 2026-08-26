@@ -8,35 +8,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        terracotta: {
-          DEFAULT: "#D35C30",
-          light: "#E07650",
-          dark: "#B84E26",
+        ember: {
+          DEFAULT: "#C85A2F",
+          light: "#E8774A",
+          dark: "#A34420",
         },
-        masala: {
-          DEFAULT: "#4A2418",
-          light: "#6B3525",
-          dark: "#2E1510",
-        },
-        cream: {
-          DEFAULT: "#FBF1E8",
-          light: "#FEF8F3",
-          dark: "#F0E4D4",
+        charcoal: {
+          DEFAULT: "#2A1610",
+          warm: "#351E14",
+          muted: "#4A2E22",
         },
         gold: {
-          DEFAULT: "#C78A43",
-          light: "#D9A05A",
-          dark: "#A8732E",
+          DEFAULT: "#D4A853",
+          light: "#E8C97A",
+          dark: "#B8912F",
         },
-        leaf: {
-          DEFAULT: "#556B4D",
-          light: "#6B8A61",
-          dark: "#3E5039",
+        ivory: {
+          DEFAULT: "#FAF6F0",
+          warm: "#F3EBE0",
         },
+        sand: {
+          DEFAULT: "#E8DFD2",
+        },
+        "text-primary": "#2A1610",
+        "text-secondary": "#5C3A2E",
+        "text-muted": "#8A5F4D",
       },
       fontFamily: {
-        serif: ["Cormorant Garamond", "Georgia", "serif"],
-        sans: ["Manrope", "system-ui", "sans-serif"],
+        serif: ["Poppins", "system-ui", "sans-serif"],
+        sans: ["Poppins", "system-ui", "sans-serif"],
       },
       animation: {
         "fade-up": "fadeUp 0.8s ease-out forwards",

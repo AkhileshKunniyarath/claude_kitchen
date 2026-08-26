@@ -12,8 +12,8 @@ export function FloatingOrderButton() {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 md:hidden flex items-center gap-2.5 
-                 bg-terracotta text-cream font-semibold text-sm px-5 py-3.5 
-                 rounded-full shadow-lg hover:bg-terracotta-dark transition-all 
+                 bg-ember text-ivory font-semibold text-sm px-5 py-3.5 
+                 rounded-full shadow-[0_12px_30px_rgba(200,90,47,0.35)] hover:bg-ember-dark transition-all 
                  duration-300 active:scale-95"
       aria-label="Order now on WhatsApp"
     >

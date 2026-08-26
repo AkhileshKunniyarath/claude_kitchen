@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="520" height="620" viewBox="0 0 520 620" role="img" aria-labelledby="title">
   <title id="title">Claude Kitchen stacked logo</title>
   <image href="/logo/claude-kitchen-mark.png" x="80" y="0" width="360" height="360"/>
-  <text x="260" y="458" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="10" fill="#4A2418">CLAUDE</text>
-  <line x1="78" y1="512" x2="168" y2="512" stroke="#D35C30" stroke-width="4" opacity="0.8"/>
-  <text x="260" y="532" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" letter-spacing="18" fill="#4A2418">KITCHEN</text>
-  <line x1="352" y1="512" x2="442" y2="512" stroke="#D35C30" stroke-width="4" opacity="0.8"/>
-  <text x="260" y="592" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="8" fill="#D35C30">COOK. CREATE. DELIVER.</text>
+  <text x="260" y="458" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="10" fill="#7D3019">CLAUDE</text>
+  <line x1="78" y1="512" x2="168" y2="512" stroke="#D65D31" stroke-width="4" opacity="0.8"/>
+  <text x="260" y="532" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" letter-spacing="18" fill="#7D3019">KITCHEN</text>
+  <line x1="352" y1="512" x2="442" y2="512" stroke="#D65D31" stroke-width="4" opacity="0.8"/>
+  <text x="260" y="592" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="8" fill="#D65D31">COOK. CREATE. DELIVER.</text>
 </svg>
