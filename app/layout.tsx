@@ -16,8 +16,10 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata(): Promise<Metadata> {
   let config: any = fallbackSiteConfig;
   try {
-    await connectDB();
-    config = (await SiteConfigModel.findOne({}).lean()) || fallbackSiteConfig;
+    const db = await connectDB();
+    if (db) {
+      config = (await SiteConfigModel.findOne({}).lean()) || fallbackSiteConfig;
+    }
   } catch {
     // DB unavailable — use fallback config
   }
@@ -69,8 +71,10 @@ export default async function RootLayout({
 }>) {
   let dbConfig: any = null;
   try {
-    await connectDB();
-    dbConfig = await SiteConfigModel.findOne({}).lean();
+    const db = await connectDB();
+    if (db) {
+      dbConfig = await SiteConfigModel.findOne({}).lean();
+    }
   } catch {
     // DB unavailable — use fallback config
   }

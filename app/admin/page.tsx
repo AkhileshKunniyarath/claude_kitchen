@@ -35,14 +35,25 @@ async function seedDatabaseAction() {
 }
 
 export default async function AdminDashboard() {
-  await connectDB();
+  const db = await connectDB();
   
-  const [menuCount, dishCountData, testimonialCount, faqCount] = await Promise.all([
-    MenuCategory.countDocuments({}),
-    MenuCategory.aggregate([{ $project: { dishCount: { $size: "$dishes" } } }]),
-    Testimonial.countDocuments({}),
-    FAQ.countDocuments({}),
-  ]);
+  let menuCount = 0;
+  let dishCountData: any[] = [];
+  let testimonialCount = 0;
+  let faqCount = 0;
+
+  if (db) {
+    try {
+      [menuCount, dishCountData, testimonialCount, faqCount] = await Promise.all([
+        MenuCategory.countDocuments({}),
+        MenuCategory.aggregate([{ $project: { dishCount: { $size: "$dishes" } } }]),
+        Testimonial.countDocuments({}),
+        FAQ.countDocuments({}),
+      ]);
+    } catch {
+      // DB query failed
+    }
+  }
 
   const totalDishes = dishCountData.reduce((acc, curr) => acc + curr.dishCount, 0);
 

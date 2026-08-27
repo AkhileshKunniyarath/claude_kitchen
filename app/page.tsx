@@ -32,11 +32,13 @@ export default async function HomePage() {
   let testimonials: any[] = [];
 
   try {
-    await connectDB();
-    [menuCategories, testimonials] = await Promise.all([
-      MenuCategory.find({}).lean(),
-      Testimonial.find({}).lean(),
-    ]);
+    const db = await connectDB();
+    if (db) {
+      [menuCategories, testimonials] = await Promise.all([
+        MenuCategory.find({}).lean(),
+        Testimonial.find({}).lean(),
+      ]);
+    }
   } catch {
     // DB unavailable — render with fallback static data
   }

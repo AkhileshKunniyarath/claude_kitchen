@@ -26,8 +26,10 @@ export const revalidate = 60;
 export default async function ContactPage() {
   let faqs: any[] = [];
   try {
-    await connectDB();
-    faqs = await FAQ.find({}).lean();
+    const db = await connectDB();
+    if (db) {
+      faqs = await FAQ.find({}).lean();
+    }
   } catch {
     // DB unavailable — fallback to static FAQs
   }

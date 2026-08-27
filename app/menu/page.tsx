@@ -16,8 +16,10 @@ export const revalidate = 60; // Revalidate every 60 seconds
 export default async function MenuPage() {
   let menuCategories: any[] = [];
   try {
-    await connectDB();
-    menuCategories = await MenuCategory.find({}).lean();
+    const db = await connectDB();
+    if (db) {
+      menuCategories = await MenuCategory.find({}).lean();
+    }
   } catch {
     // DB unavailable — fallback to static menu categories
   }
